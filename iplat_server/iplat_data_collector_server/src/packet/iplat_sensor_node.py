@@ -1,5 +1,5 @@
 import pymysql
-from iplat_logger import iplat_print
+from src.iplat_logger import iplat_print
 
 from src.database.device import Device
 from src.database.sensor import Sensor
