@@ -1,0 +1,19 @@
+.dsh-workspace-item{
+    position: absolute;
+    /*cursor: grab;*/
+
+}
+.dsh-workspace-no-item{
+    position: absolute;
+    /*cursor: grabbing;*/
+    resize: both;
+    overflow: hidden;
+}
+
+.dsh-workspace-no-selective-item{
+    visibility: hidden;
+}
+
+.dsh-workspace-selective-item{
+    visibility: visible;
+}

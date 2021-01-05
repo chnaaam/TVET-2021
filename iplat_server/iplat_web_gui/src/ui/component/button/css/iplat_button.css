@@ -1,0 +1,15 @@
+/*BUTTON : "#21A3B8",*/
+/*BUTTON_HOVER : "#1D8899",*/
+
+.btn{
+    background-color: #21A3B8;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+.btn:active{
+    background-color: #1D8899;
+    color: whitesmoke;
+}

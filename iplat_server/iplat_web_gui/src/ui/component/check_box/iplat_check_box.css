@@ -1,0 +1,17 @@
+input[id='checkbox']{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+input[id='checkbox'] + label{
+    position: relative;
+    font-size: 15px;
+    top: -1.5px;
+    left: 4px;
+    display: inline-block;
+    color: #e4e4e4;
+}

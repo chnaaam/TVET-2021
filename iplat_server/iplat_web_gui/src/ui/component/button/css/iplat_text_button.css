@@ -1,0 +1,14 @@
+.text-btn{
+    color:white;
+}
+.text-btn:hover{
+    color: gold;
+    margin: 0;
+    /*background-color: tomato;*/
+}
+
+.text-btn:active{
+    color: goldenrod;
+    margin: 0;
+    /*background-color: tomato;*/
+}

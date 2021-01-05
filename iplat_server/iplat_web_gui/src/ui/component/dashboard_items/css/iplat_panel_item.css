@@ -1,0 +1,10 @@
+.dsh-panel-item{
+    /*background-color: #21A3B8;*/
+    /*border: #21A3B8 2px solid;*/
+    background-color: #21A3B8;
+    border-radius: 5px;
+}
+
+.dsh-panel-item:hover{
+    background-color: gold;
+}

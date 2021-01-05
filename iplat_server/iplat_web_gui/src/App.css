@@ -1,0 +1,26 @@
+@font-face {
+    /*font-family: 'Segoe UI';*/
+    /*src:  url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700&display=swap")*/
+    /*format('truetype');*/
+}
+
+* {
+    overflow: hidden;
+    font-size: 15px;
+    font-family: "Segoe UI", "sans-serif";
+
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+.test{
+    background-color: aqua;
+}
+
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

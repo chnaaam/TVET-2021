@@ -1,0 +1,88 @@
+.panel-body{
+    width: 200px;
+}
+
+.panel-container{
+    width: inherit;
+    height: 30px;
+}
+
+.panel-container>h1{
+    width: 100px;
+    height: 30px;
+
+    padding-top: 3px;
+    display: inline-block;
+    text-align: center;
+
+    border-left: 2px solid #272930;
+    border-right: 2px solid #272930;
+    border-top: 2px solid #272930;
+}
+
+.text-button-area{
+
+    display: inline-block;
+    border-bottom: 2px solid #272930;
+    padding-top: 7px;
+    color: white;
+    font-size: 13px;
+    /*background-color: mediumvioletred;*/
+    height: 30px;
+    width: 200px;
+    position: relative;
+}
+
+.text-button-area>ul{
+    height: 30px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right:0;
+    /*background-color: goldenrod;*/
+    list-style-type: none;
+    padding: 0 0;
+}
+
+.text-button-new{
+    height: 30px;
+}
+
+.text-button-new:after{
+    content:'';
+    display: inline-block;
+    clear: left;
+
+    width: 0;
+    height: 10px;
+    border-left: 1px solid white;
+    margin-bottom: 2px;
+}
+
+.text-button-down{
+    height: 30px;
+
+    /*background-color: greenyellow;*/
+}
+
+.text-button-down:after{
+    content:'';
+    display: inline-block;
+    clear: left;
+
+    width: 0;
+    height: 10px;
+    border-left: 1px solid white;
+    margin-bottom: 2px;
+}
+
+.list-item-area{
+    width: inherit;
+    border-left: 2px solid #272930;
+    border-right: 2px solid #272930;
+    border-bottom: 2px solid #272930;
+}
+
+
+
+

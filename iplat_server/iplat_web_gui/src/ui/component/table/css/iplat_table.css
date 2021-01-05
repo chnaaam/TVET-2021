@@ -1,0 +1,32 @@
+.example {
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style-type: none;
+    padding: 0 0;
+    /*background-color:royalblue;*/
+}
+
+.example::-webkit-scrollbar {
+    /*display: none;*/
+    width: 6px;
+}
+
+.example::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.example::-webkit-scrollbar-thumb {
+    height: 30px;
+    border-radius: 3px;
+    background-color: #e4e4e4;
+}
+
+.example::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+.table-area{
+    list-style-type: none;
+    padding: 0 0;
+}

@@ -1,0 +1,243 @@
+/*가로 343 세로 250 content크기 220*/
+
+.monitoring-panel-header{
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.monitoring-panel-header>h1{
+    width: 190px;
+    height: 30px;
+    text-align: center;
+
+    padding-top: 3px;
+
+    border-left: 2px solid #272930;
+    border-right: 2px solid #272930;
+    border-top: 2px solid #272930;
+}
+
+.monitoring-panel-content{
+    width: 343px;
+
+    border-left: 2px solid #272930;
+    border-right: 2px solid #272930;
+    border-bottom: 2px solid #272930;
+
+    /*border-left: 2px solid red;*/
+    /*border-right: 2px solid red;*/
+    /*border-bottom: 2px solid red;*/
+}
+
+.monitoring-panel-content ul{
+    width: inherit;
+    height: 220px;
+
+    list-style-type: none;
+    padding: 0 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.content-item1{
+    /*margin-top: 5px;*/
+    /*margin-left: 6px;*/
+    width: 100%;
+    height: 60%;
+    /*height: 50%;*/
+    /*border:1px solid #4e5163;*/
+}
+.start-stop-button-area{
+    width: 100%;
+    height: 100%;
+    /*background-color: aquamarine;*/
+    position: relative;
+}
+.start-stop-button-area>span:first-child{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: white;
+    font-size: 12px;
+    /*line-height: 34px;*/
+    padding-left: 5px;
+}
+
+.start-button{
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    /*height: 100%;*/
+}
+.start-button>button:first-child{
+    font-size: 12px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    width: 130px;
+    height: 25px;
+    background-color:#21A3B8;
+}
+
+
+.stop-button{
+    position: absolute;
+    top: 40px;
+    left: 180px;
+
+    /*height: 100%;*/
+    /*padding-top: 7px;*/
+}
+.stop-button>button:first-child{
+    font-size: 12px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    width: 130px;
+    height: 25px;
+    background-color:#21A3B8;
+}
+
+
+.scheduled-area{
+    width: 100%;
+    height: 60%;
+    position: relative;
+}
+.scheduled-area>span{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+    line-height: 24px;
+    padding-left: 5px;
+}
+.start-time-input-box{
+    position: absolute;
+    top: 0;
+    left: 100px;
+
+    display: inline-block;
+}
+.start-time-input-box>span:first-child{
+    color: white;
+    font-size: 12px;
+    margin-right: 30px;
+}
+.start-time-input-box>span:last-child{
+    color: white;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.period-input-box{
+    position: absolute;
+    top: 23px;
+    left: 120px;
+
+    display: inline-block;
+    height: 100%;
+}.period-input-box>span:first-child{
+     color: white;
+     font-size: 12px;
+     margin-right: 30px;
+ }
+.period-input-box>span:last-child{
+    color: white;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.content-item2{
+    margin-top: 5px;
+    margin-left: 6px;
+    width: 95%;
+    height: 25%;
+    border:1px solid #4e5163;
+}
+.sampling-rate-area{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.sampling-rate-area>span{
+    position: absolute;
+    top: 16px;
+    left: 20px;
+
+    display: inline-block;
+
+    color: white;
+    font-size: 12px;
+    padding-left: 5px;
+}
+.sampling-rate-input-box{
+    position: absolute;
+    top: 15px;
+    left: 183px;
+
+    height: 20px;
+    display: inline-block;
+}
+.sampling-rate-input-box>span{
+    color: white;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.content-item3{
+    margin-top: 5px;
+    margin-left: 6px;
+    width: 95%;
+    height: 25%;
+    border:1px solid #4e5163;
+}
+.display-only-or-save-area{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.display-only-or-save-area>span{
+    position: absolute;
+    top: 8px;
+    left: 20px;
+
+    display: inline-block;
+
+    color: white;
+    font-size: 12px;
+    line-height: 34px;
+    padding-left: 5px;
+}
+.display-only-button{
+    position: absolute;
+    top: 8px;
+    left: 100px;
+
+    display: inline-block;
+
+    height: 100%;
+    padding-top: 7px;
+}
+.display-save-button{
+    position: absolute;
+    top: 8px;
+    left: 210px;
+    display: inline-block;
+
+    height: 100%;
+    padding-top: 7px;
+}

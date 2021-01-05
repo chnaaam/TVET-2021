@@ -1,0 +1,90 @@
+.device-management-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    margin-top: 30px;
+}
+
+/* Device, Sensor, Data List */
+.left-list-container{
+    height: 700px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.left-list-body{
+    list-style-type: none;
+    padding: 0 0;
+}
+
+.left-list-body>li{
+    margin-bottom: 15px;
+}
+
+.left-list-body:nth-child(3){
+    margin-bottom: 0px;
+}
+
+.right-container{
+    margin-left: 15px;
+    width: 1055px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.right-container>ul{
+    list-style-type: none;
+    padding: 0 0;
+    height: 250px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.right-container>ul>li:first-child{
+    position: relative;
+}
+
+.right-container .device-state{
+    padding-top: 2px;
+    position: absolute;
+    top:30px;
+    left: 275px;
+}
+
+.right-container .graph-and-Text{
+    margin-top: 15px;
+    margin-left: 0;
+    width: inherit;
+    height: 435px;
+}
+
+.monitoring{
+    position: relative;
+}
+
+.monitoring-connection-status{
+    padding-top: 2px;
+    position: absolute;
+    top:31px;
+    left: 245px;
+}
+.monitoring-status{
+    /*padding-top: 2px;*/
+    /*position: absolute;*/
+    /*top:54px;*/
+    /*left: 245px;*/
+    padding-top: 2px;
+    position: absolute;
+    top:31px;
+    left: 240px;
+}

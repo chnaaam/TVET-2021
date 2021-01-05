@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d4791f0e-80c1-4548-8fb6-f4a7f44fe78d" name="Default Changelist" comment="change file name and class">
+      <change afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/data_logging.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/device.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/sensor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/sqlalchemy_decode.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/stream_server_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ipc/iplat_ipc_data_format.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ipc/iplat_ipc_protocol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/iplat_sn_handler.py.old" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/packet/iplat_error_code.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/packet/iplat_packet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/packet/iplat_packet_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/packet/iplat_sensor_node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/IoT-Makers-Socket-Server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IoT-Makers-Socket-Server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iplat_data_collector_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/iplat_data_collector_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iplat_db_info.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iplat_df_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/iplat_df_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iplat_sd_streamer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/iplat_sd_streamer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iplat_sn_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/iplat_sn_handler.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="b49acfbe-620e-46bf-8940-06f31e0ae211" />
+  <component name="ProjectId" id="1btPCSVJbKSNBZoLjGsgHCUnpih" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\20201012_iplat_project\01. source code\03. data collector\iplat_data_collector_server\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\20201012_iplat_project\01. source code\03. data collector\iplat_data_collector_server\src\packet" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.test">
+    <configuration name="base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IoT-Makers-Socket-Server" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/base.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="iplat_data_collector_server (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IoT-Makers-Socket-Server" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/iplat_data_collector_server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="iplat_sn_handler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IoT-Makers-Socket-Server" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/iplat_sn_handler.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IoT-Makers-Socket-Server" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/database/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IoT-Makers-Socket-Server" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.iplat_data_collector_server (1)" />
+        <item itemvalue="Python.iplat_sn_handler" />
+        <item itemvalue="Python.base" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4791f0e-80c1-4548-8fb6-f4a7f44fe78d" name="Default Changelist" comment="" />
+      <created>1589448288989</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589448288989</updated>
+      <workItem from="1589448290647" duration="3635000" />
+      <workItem from="1590063519897" duration="599000" />
+      <workItem from="1590644887418" duration="583000" />
+      <workItem from="1591057064480" duration="2262000" />
+      <workItem from="1592047232985" duration="1278000" />
+      <workItem from="1593509504840" duration="11913000" />
+      <workItem from="1602564387400" duration="3039000" />
+      <workItem from="1602745519809" duration="1789000" />
+      <workItem from="1602747357202" duration="15276000" />
+      <workItem from="1603074250193" duration="4818000" />
+      <workItem from="1603159755211" duration="10461000" />
+      <workItem from="1603284177865" duration="3342000" />
+      <workItem from="1603936582582" duration="17165000" />
+      <workItem from="1604222770027" duration="13380000" />
+      <workItem from="1604414817493" duration="4808000" />
+      <workItem from="1604816201828" duration="9982000" />
+      <workItem from="1604884268404" duration="3228000" />
+      <workItem from="1604902858493" duration="6696000" />
+      <workItem from="1605143976991" duration="598000" />
+      <workItem from="1605238500056" duration="23186000" />
+      <workItem from="1605761584429" duration="8880000" />
+      <workItem from="1605866322780" duration="6219000" />
+      <workItem from="1606022791761" duration="27056000" />
+      <workItem from="1606099083011" duration="36149000" />
+      <workItem from="1607059977713" duration="18000" />
+      <workItem from="1607944645882" duration="3379000" />
+      <workItem from="1608557155041" duration="1615000" />
+      <workItem from="1608884944086" duration="1809000" />
+      <workItem from="1609756044892" duration="594000" />
+    </task>
+    <task id="LOCAL-00001" summary="change file name and class">
+      <created>1602747489382</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602747489382</updated>
+    </task>
+    <task id="LOCAL-00002" summary="change file name and class">
+      <created>1602834148452</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602834148452</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change file name and class" />
+    <option name="LAST_COMMIT_MESSAGE" value="change file name and class" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1332" y="500" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606873200418">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1332" y="500" key="#com.intellij.fileTypes.FileTypeChooser/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1606873200418" />
+    <state x="1011" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602747919960">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1011" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1602747919960" />
+    <state x="1020" y="511" key="FileChooserDialogImpl" timestamp="1606875861185">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="759" y="511" key="FileChooserDialogImpl/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604816245077" />
+    <state x="4160" y="902" key="FileChooserDialogImpl/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@3840.201.1080.1920" timestamp="1603723864539" />
+    <state x="1020" y="511" key="FileChooserDialogImpl/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1606875861185" />
+    <state width="1674" height="259" key="GridCell.Tab.0.bottom" timestamp="1608557338312">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1037" height="322" key="GridCell.Tab.0.bottom/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@-1080.226.1080.1860" timestamp="1603950608201" />
+    <state width="2517" height="299" key="GridCell.Tab.0.bottom/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604905098212" />
+    <state width="1037" height="565" key="GridCell.Tab.0.bottom/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@3840.201.1080.1920" timestamp="1603108940107" />
+    <state width="2517" height="394" key="GridCell.Tab.0.bottom/0.0.2560.1400/3840.201.1080.1920/4920.227.1080.1920@0.0.2560.1400" timestamp="1605514785130" />
+    <state width="1674" height="259" key="GridCell.Tab.0.bottom/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1608557338312" />
+    <state width="1674" height="259" key="GridCell.Tab.0.center" timestamp="1608557338312">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1037" height="322" key="GridCell.Tab.0.center/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@-1080.226.1080.1860" timestamp="1603950608201" />
+    <state width="2517" height="299" key="GridCell.Tab.0.center/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604905098211" />
+    <state width="1037" height="565" key="GridCell.Tab.0.center/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@3840.201.1080.1920" timestamp="1603108940107" />
+    <state width="2517" height="394" key="GridCell.Tab.0.center/0.0.2560.1400/3840.201.1080.1920/4920.227.1080.1920@0.0.2560.1400" timestamp="1605514785130" />
+    <state width="1674" height="259" key="GridCell.Tab.0.center/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1608557338312" />
+    <state width="1674" height="259" key="GridCell.Tab.0.left" timestamp="1608557338312">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1037" height="322" key="GridCell.Tab.0.left/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@-1080.226.1080.1860" timestamp="1603950608200" />
+    <state width="2517" height="299" key="GridCell.Tab.0.left/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604905098211" />
+    <state width="1037" height="565" key="GridCell.Tab.0.left/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@3840.201.1080.1920" timestamp="1603108940107" />
+    <state width="2517" height="394" key="GridCell.Tab.0.left/0.0.2560.1400/3840.201.1080.1920/4920.227.1080.1920@0.0.2560.1400" timestamp="1605514785130" />
+    <state width="1674" height="259" key="GridCell.Tab.0.left/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1608557338312" />
+    <state width="1674" height="259" key="GridCell.Tab.0.right" timestamp="1608557338312">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1037" height="322" key="GridCell.Tab.0.right/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@-1080.226.1080.1860" timestamp="1603950608201" />
+    <state width="2517" height="299" key="GridCell.Tab.0.right/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604905098212" />
+    <state width="1037" height="565" key="GridCell.Tab.0.right/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@3840.201.1080.1920" timestamp="1603108940107" />
+    <state width="2517" height="394" key="GridCell.Tab.0.right/0.0.2560.1400/3840.201.1080.1920/4920.227.1080.1920@0.0.2560.1400" timestamp="1605514785130" />
+    <state width="1674" height="259" key="GridCell.Tab.0.right/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1608557338312" />
+    <state width="1676" height="345" key="GridCell.Tab.1.bottom" timestamp="1607059821389">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1037" height="563" key="GridCell.Tab.1.bottom/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@-1080.226.1080.1860" timestamp="1603950181007" />
+    <state width="2517" height="394" key="GridCell.Tab.1.bottom/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604405618040" />
+    <state width="1037" height="565" key="GridCell.Tab.1.bottom/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@3840.201.1080.1920" timestamp="1603108934716" />
+    <state width="2517" height="394" key="GridCell.Tab.1.bottom/0.0.2560.1400/3840.201.1080.1920/4920.227.1080.1920@0.0.2560.1400" timestamp="1605514785130" />
+    <state width="1676" height="345" key="GridCell.Tab.1.bottom/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1607059821389" />
+    <state width="1676" height="345" key="GridCell.Tab.1.center" timestamp="1607059821389">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1037" height="563" key="GridCell.Tab.1.center/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@-1080.226.1080.1860" timestamp="1603950181007" />
+    <state width="2517" height="394" key="GridCell.Tab.1.center/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604405618040" />
+    <state width="1037" height="565" key="GridCell.Tab.1.center/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@3840.201.1080.1920" timestamp="1603108934716" />
+    <state width="2517" height="394" key="GridCell.Tab.1.center/0.0.2560.1400/3840.201.1080.1920/4920.227.1080.1920@0.0.2560.1400" timestamp="1605514785130" />
+    <state width="1676" height="345" key="GridCell.Tab.1.center/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1607059821389" />
+    <state width="1676" height="345" key="GridCell.Tab.1.left" timestamp="1607059821389">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1037" height="563" key="GridCell.Tab.1.left/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@-1080.226.1080.1860" timestamp="1603950181007" />
+    <state width="2517" height="394" key="GridCell.Tab.1.left/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604405618040" />
+    <state width="1037" height="565" key="GridCell.Tab.1.left/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@3840.201.1080.1920" timestamp="1603108934716" />
+    <state width="2517" height="394" key="GridCell.Tab.1.left/0.0.2560.1400/3840.201.1080.1920/4920.227.1080.1920@0.0.2560.1400" timestamp="1605514785130" />
+    <state width="1676" height="345" key="GridCell.Tab.1.left/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1607059821389" />
+    <state width="1676" height="345" key="GridCell.Tab.1.right" timestamp="1607059821389">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="1037" height="563" key="GridCell.Tab.1.right/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@-1080.226.1080.1860" timestamp="1603950181007" />
+    <state width="2517" height="394" key="GridCell.Tab.1.right/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604405618040" />
+    <state width="1037" height="565" key="GridCell.Tab.1.right/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@3840.201.1080.1920" timestamp="1603108934716" />
+    <state width="2517" height="394" key="GridCell.Tab.1.right/0.0.2560.1400/3840.201.1080.1920/4920.227.1080.1920@0.0.2560.1400" timestamp="1605514785130" />
+    <state width="1676" height="345" key="GridCell.Tab.1.right/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1607059821389" />
+    <state x="1051" y="345" key="SettingsEditor" timestamp="1609238479315">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="782" y="345" key="SettingsEditor/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604816281880" />
+    <state x="3922" y="674" key="SettingsEditor/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@3840.201.1080.1920" timestamp="1603077532319" />
+    <state x="1051" y="345" key="SettingsEditor/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1609238479315" />
+    <state x="4104" y="795" key="Vcs.Push.Dialog.v2" timestamp="1602834158538">
+      <screen x="3840" y="201" width="1080" height="1920" />
+    </state>
+    <state x="873" y="433" key="Vcs.Push.Dialog.v2/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1602747535790" />
+    <state x="4104" y="795" key="Vcs.Push.Dialog.v2/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@3840.201.1080.1920" timestamp="1602834158538" />
+    <state x="1097" y="386" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604889367275">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1097" y="386" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604889367275" />
+    <state x="1095" y="613" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605501584988">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1095" y="613" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400/3840.201.1080.1920/4920.227.1080.1920@0.0.2560.1400" timestamp="1605501584988" />
+    <state x="4153" y="-1024" width="733" height="1287" maximized="true" key="dock-window-1" timestamp="1606106163719">
+      <screen x="3440" y="-1024" width="1440" height="2533" />
+    </state>
+    <state x="-1080" y="226" width="1096" height="1389" maximized="true" key="dock-window-1/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604930738826" />
+    <state x="3833" y="201" width="554" height="967" maximized="true" key="dock-window-1/0.0.2560.1400/3840.201.1080.1920/4920.227.1080.1920@0.0.2560.1400" timestamp="1605493455304" />
+    <state x="4153" y="-1024" width="733" height="1287" maximized="true" key="dock-window-1/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1606106163719" />
+    <state x="1999" y="0" width="1457" height="1488" key="dock-window-2" timestamp="1605863287779">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1365" y="113" width="2244" height="989" maximized="true" key="dock-window-2/0.0.2560.1400/3840.201.1080.1920/4920.227.1080.1920@0.0.2560.1400" timestamp="1605514058373" />
+    <state x="1999" y="0" width="1457" height="1488" key="dock-window-2/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1605863287779" />
+    <state x="1267" y="315" width="903" height="678" key="search.everywhere.popup" timestamp="1606105903929">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/-1080.226.1080.1860/0.0.2560.1400/3840.201.1080.1920@0.0.2560.1400" timestamp="1604838500206" />
+    <state x="1267" y="315" width="903" height="678" key="search.everywhere.popup/3440.-1024.1440.2533/0.0.3440.1400@0.0.3440.1400" timestamp="1606105903929" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/iplat_sn_handler.py</url>
+          <line>216</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self.manager" language="Python" />
+        <watch expression="self.queue_data" language="Python" />
+        <watch expression="self.queue_command.get()" language="Python" />
+        <watch expression="not status" language="Python" />
+        <watch expression="e" language="Python" />
+        <watch expression="sid" language="Python" />
+        <watch expression="data" language="Python" />
+        <watch expression="isn.get_sids()" language="Python" />
+        <watch expression="packet_type &amp; 0x0F" language="Python" />
+        <watch expression="packet[3:]" language="Python" />
+        <watch expression="data[16]" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/iplat_data_collector_server$iplat_sn_handler.coverage" NAME="iplat_sn_handler Coverage Results" MODIFIED="1605865851635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/IoT_Makers_Socket_Server$main.coverage" NAME="main Coverage Results" MODIFIED="1593565624035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/iplat_data_collector_server$iplat_ss_handler.coverage" NAME="iplat_ss_handler Coverage Results" MODIFIED="1603949584753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/iplat_data_collector_server$base.coverage" NAME="base Coverage Results" MODIFIED="1605501425792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/database" />
+    <SUITE FILE_PATH="coverage/IoT_Makers_Socket_Server$test.coverage" NAME="test Coverage Results" MODIFIED="1593564983929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/iplat_data_collector_server$test.coverage" NAME="test Coverage Results" MODIFIED="1608557338302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/iplat_data_collector_server$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1608557328506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/database" />
+    <SUITE FILE_PATH="coverage/iplat_data_collector_server$iplat_data_collector_server__1_.coverage" NAME="iplat_data_collector_server (1) Coverage Results" MODIFIED="1608117912804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

@@ -1,0 +1,8 @@
+.dah-workspace{
+    width: calc(100% - 250px);
+    display: inline-block;
+    position: relative;
+
+    height: inherit;
+    background-color: #2E313A;
+}

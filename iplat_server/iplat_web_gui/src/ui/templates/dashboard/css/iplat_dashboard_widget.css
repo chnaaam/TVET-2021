@@ -1,0 +1,33 @@
+.dsh-panel-body{
+    width: 250px;
+}
+
+.dsh-panel-container{
+    width: inherit;
+    height: 30px;
+}
+
+.dsh-panel-container>h1{
+    width: 100px;
+    height: 30px;
+
+    padding-top: 3px;
+    display: inline-block;
+    text-align: center;
+
+    border-left: 2px solid #272930;
+    border-right: 2px solid #272930;
+    border-top: 2px solid #272930;
+}
+
+.dsh-list-item-area{
+    width: inherit;
+    border-left: 2px solid #272930;
+    border-right: 2px solid #272930;
+    border-bottom: 2px solid #272930;
+
+}
+
+
+
+

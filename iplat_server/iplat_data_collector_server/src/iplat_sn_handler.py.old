@@ -1,0 +1,365 @@
+import socket
+import socketserver
+from datetime import datetime
+from multiprocessing import Process, Queue
+import pymysql
+
+from src.iplat_logger import *
+from src.iplat_sd_streamer import run_sd_streamer
+
+CMD_CONNECTION_REQUEST = 0x10
+CMD_CONNECTION_REPLY = 0x11
+
+CMD_MONITORING_START = 0x20
+
+CMD_DATA = 0x0F
+
+IPLAT_DECIMAL = 0x00
+IPLAT_FLOAT = 0x01
+IPLAT_STRING = 0x02
+
+IPLAT_ALIVE_ON = 1
+IPLAT_ALIVE_OFF = 0
+
+# server for iplat sensor node handler
+class IplatSnhServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
+    def __init__(
+            self,
+            server_address,
+            RequestHandlerClass,
+            q_sns2db,
+            q_cmd,
+            db_config,
+    ):
+        socketserver.ThreadingTCPServer.__init__(
+            self,
+            server_address,
+            RequestHandlerClass
+        )
+
+        self.q_sns2db = q_sns2db
+        self.q_cmd = q_cmd
+        self.db_config = db_config
+        self.stream_server_port = 9050
+        self.queue_per_user = dict()
+
+        self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
+# handler for iplat sensor node hanlder
+class IplatSnhHandler(socketserver.BaseRequestHandler):
+    def handle(self):
+        is_certificated = False
+
+        # User Information
+        user_info = dict()
+        sd_streamer_process = None
+
+        iplat_print("Client : " + self.client_address[0])
+
+        # Timeout
+        self.request.settimeout(3)
+
+        while True:
+            try:
+                received_data = self.request.recv(1024)
+
+                decode_data = self.decode(received_data)
+
+                if decode_data["PACKET_TYPE"] == CMD_CONNECTION_REQUEST:
+                    send_data = self.command(decode_data)
+
+                    if send_data is None:
+                        continue
+
+                    device_id, sensor_id, sps = self.get_id(decode_data)
+                    user_info.setdefault("device_id", device_id)
+                    user_info.setdefault("sensor_id", sensor_id)
+                    user_info.setdefault("sps", sps)
+                    user_info.setdefault("data_idx", 0)
+
+                    is_certificated = True
+                    self.request.send(send_data)
+
+                if not is_certificated:    # 인증되지 않은 경우 데이터를 생략
+                    continue
+                else: # 인증된 경우
+                    sd_streamer_process, user_sd_streamer_port = self.init_sensing_data_streaming_server(user_info)
+                    user_info.setdefault("sd_streamer_port", user_sd_streamer_port)
+
+                    self.update_is_alive_device(
+                        IPLAT_ALIVE_ON,
+                        user_info["device_id"],
+                        user_info["sensor_id"]
+                    )
+
+                    self.run(user_info)
+
+            except TimeoutError as e:
+                iplat_print(e)
+                print(e)
+                break
+
+            except Exception as e:
+                iplat_print(e)
+                print(e)
+                break
+
+        # Disconnection Part
+        # send sensor node disconnection to data / file handler
+        self.server.q_sns2db.put({
+            'status': False,
+            'user': user_info,
+            'data': None
+        })
+
+        # update that alive toggle in database is activated low
+        if 'device_id' in user_info:
+            self.update_is_alive_device(
+                IPLAT_ALIVE_OFF,
+                user_info["device_id"],
+                user_info["sensor_id"]
+            )
+
+        # send information that delete sensor node ip and port to service server handler
+        self.server.q_cmd.put({
+            "message": "delete",
+            "data": {
+                "device_id": user_info['device_id'],
+                "sensor_id": user_info['sensor_id']
+            }
+        })
+
+        # remove queue per user variable
+        del self.server.queue_per_user[user_info['device_id'] + "_" + user_info["sensor_id"]]
+
+        # Kill the sending data streamer process
+        if sd_streamer_process:
+            sd_streamer_process.terminate()
+
+    def send(self, data):
+        self.request.send(data)
+
+    def recv(self):
+        return self.request.recv(1024)
+
+
+
+    def init_sensing_data_streaming_server(self, user_info):
+        q_data = Queue()
+        q_cmd = Queue()
+        q_process_cmd = Queue()
+
+        self.server.queue_per_user.setdefault(
+            user_info['device_id'] + "_" + user_info["sensor_id"],
+            {
+                'port': self.server.stream_server_port,
+                "queue": {
+                    "cmd": q_cmd,
+                    "data": q_data
+                }
+            }
+        )
+
+        p = Process(target=run_sd_streamer, args=(self.server.stream_server_port, q_cmd, q_data, q_process_cmd))
+        p.start()
+
+        self.server.q_cmd.put({
+            "message": "new",
+            "data": {
+                "device_id": user_info['device_id'],
+                "sensor_id": user_info['sensor_id'],
+                'ip': self.get_ip(),
+                'port': self.server.stream_server_port
+            }
+        })
+
+        self.server.stream_server_port = self.server.stream_server_port + 1
+
+        return p, self.server.stream_server_port - 1
+
+    def run(self, user_info):
+        send_data = self.encode(packet_type=CMD_MONITORING_START, data=[])
+        self.request.send(send_data)
+
+        while True:
+            iplat_print("loop...", user_info['device_id'], user_info["sensor_id"])
+
+            ##########################################
+            #
+            # 1. Receive data from Arduino or raspberry pi
+            # 2. Save data
+            # 3. If client(user) click start button
+            # 3.1 then create socket io server and stream data
+            #
+            ##########################################
+
+            # 1. Receive data from Arduino or raspberry pi
+            received_data = self.request.recv(1024)
+
+            decode_data = self.decode(received_data)
+
+            user_info['data_idx'] += 1
+
+            # 2. Save data
+            self.server.q_sns2db.put({
+                'status': True,
+                'user': user_info,
+                'data': decode_data
+            })
+
+            # 3. If client(user) click start button
+            user_id = user_info['device_id'] + "_" + user_info["sensor_id"]
+            if self.server.queue_per_user[user_id]['queue']['cmd'].empty():
+                iplat_print(user_id, "Cmd | Empty")
+                continue
+
+            iplat_print("send data to client!!!")
+            self.server.queue_per_user[user_id]['queue']['data'].put({
+                'user': user_info,
+                'data': decode_data
+            })
+            pass
+
+    def encode(self, packet_type, data):
+        len_data = len(data)
+        packet = bytearray(5 + len_data)
+        packet[0] = 0xAA
+        packet[1] = packet_type
+        packet[2] = len_data & 0xFF
+        packet[-1] = 0xAA
+
+        for i in range(len_data):
+            packet[i + 3] = ord(data[i])
+
+        return packet
+
+    def decode(self, packet):
+        if packet[0] != 0xAA:
+            return {}
+
+        packet_type = packet[1]
+        data_length = int(packet[2])
+
+        data = self.decode_data(packet_type, packet[3:])
+
+        return {
+            "PACKET_TYPE": packet_type,
+            "DATA_LENGTH": data_length,
+            "DATA": data,
+        }
+
+    def decode_data(self, packet_type, data):
+        if packet_type == CMD_CONNECTION_REQUEST:
+            did = data[:8].decode()
+            sid = data[8:16].decode()
+            sps = int(data[16])
+
+            return [did, sid, sps]
+
+        elif packet_type == CMD_DATA:
+            data_type = int(data[0] & 0x07)
+
+            if data_type == IPLAT_DECIMAL:
+                data = int.from_bytes(data[1:], byteorder='big', signed=False)
+            elif data_type == IPLAT_FLOAT:
+                data = float(data[1:])
+            elif data_type == IPLAT_STRING:
+                data= str(data[1:])
+
+            return {
+                "DATA_TYPE": data_type,
+                "VALUE": data,
+                "TIMESTAMP": datetime.now().strftime('%Y%m%d%H%M%S%f')
+            }
+
+    def command(self, data):
+        if data['PACKET_TYPE'] == CMD_CONNECTION_REQUEST:
+            device_id = data['DATA'][0]
+            sensor_id = data['DATA'][1]
+
+            result = self.notify_identification(device_id, sensor_id)
+
+            if result == False:
+                return None
+
+            return self.encode(CMD_CONNECTION_REPLY, datetime.now().strftime('%Y%m%d%H%M%S')[2:])
+
+    def get_id(self, data):
+        if data['PACKET_TYPE'] == CMD_CONNECTION_REQUEST:
+            device_id = data['DATA'][0]
+            sensor_id = data['DATA'][1]
+            sps = data['DATA'][2]
+
+            return device_id, sensor_id, sps
+
+    def notify_identification(self, device_id, sensor_id):
+        try:
+            db = pymysql.connect(
+                host=self.server.db_config.ip,
+                port=self.server.db_config.port,
+                user=self.server.db_config.id,
+                passwd=self.server.db_config.pw,
+                db=self.server.db_config.name,
+            )
+            cursor = db.cursor()
+
+        except Exception as e:
+            iplat_print(e)
+
+            return False
+
+        query = "select * from sensor where device_id=\'{}\' and sensor_id=\'{}\'".format(
+            device_id,
+            sensor_id)
+
+        try:
+            cursor.execute(query)
+            rows = cursor.fetchall()
+
+            if len(rows) > 0:
+                return True
+            else:
+                return False
+
+        except Exception as e:
+            iplat_print("User DB Insert Error : " + str(e))
+            return False
+
+    def get_ip(self):
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        try:
+            # doesn't even have to be reachable
+            s.connect(('10.255.255.255', 1))
+            IP = s.getsockname()[0]
+        except Exception:
+            IP = '127.0.0.1'
+        finally:
+            s.close()
+        return IP
+
+    def update_is_alive_device(self, is_alive, device_id, sensor_id):
+        try:
+            db = pymysql.connect(
+                host=self.server.db_config.ip,
+                port=self.server.db_config.port,
+                user=self.server.db_config.id,
+                passwd=self.server.db_config.pw,
+                db=self.server.db_config.name,
+            )
+            cursor = db.cursor()
+        except Exception as e:
+            iplat_print(e)
+
+        query = "update sensor set is_alive=\'{}\' where " \
+                "device_id=\'{}\' and " \
+                "sensor_id=\'{}\'".format(
+            is_alive,
+            device_id,
+            sensor_id,
+        )
+
+        try:
+            cursor.execute(query)
+            db.commit()
+        except Exception as e:
+            iplat_print(e)

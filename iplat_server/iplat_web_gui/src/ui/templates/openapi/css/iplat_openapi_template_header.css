@@ -1,0 +1,35 @@
+.open-api-template-header-area{
+    background-color: #e4e4e4;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    margin-top: 15px;
+    display: inline-flex;
+    text-align: center;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid #4e5361;
+}
+.open-api-template-header-area>div{
+    height: 50px;
+    line-height: 40px;
+    background-color: #2E313A;
+}
+
+.open-api-template-header-area>div:first-child{
+    width: 10%;
+    /*background-color: #21A3B8;*/
+}
+
+.open-api-template-header-area>div:nth-child(2){
+    width: 20%;
+}
+
+.open-api-template-header-area>div:nth-child(3){
+    width: 55%;
+
+}
+
+.open-api-template-header-area>div:last-child{
+    width: 15%;
+    /*background-color: #21A3B8;*/
+}

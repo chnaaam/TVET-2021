@@ -1,0 +1,59 @@
+.device-register-body{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0, 0.5);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.device-register-content{
+    list-style-type: none;
+
+
+    width: 550px;
+    min-width: 550px;
+    height: 520px;
+    min-height: 520px;
+
+    background-color: #272930;
+
+    border-radius: 16px;
+
+    padding: 25px 0;
+    /*background-color: #21A3B8;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.device-register-error-area{
+    width: 550px;
+    height: 20px;
+}
+
+.device-register-error-area>div:first-child{
+    width: 550px;
+    height: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.device-register-cancel-btn{
+    display: inline-block;
+    margin-right: 35px;
+}
+.device-register-register-btn{
+    display: inline-block;
+}

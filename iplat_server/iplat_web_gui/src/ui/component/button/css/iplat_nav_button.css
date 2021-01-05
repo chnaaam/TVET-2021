@@ -1,0 +1,46 @@
+/*네비게이션 가로 200px 높이 60px*/
+/*FRAME_BACKGROUND : "#272930",*/
+/*BUTTON : "#21A3B8",*/
+/*BUTTON_HOVER : "#1D8899",*/
+
+.nav-btn-off{
+    width: 250px;
+    height: 60px;
+    background-color: #272930;
+    font-size: 18px;
+    textAlign: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition : background-color 100ms ease-in-out;
+}
+
+.nav-btn-off:hover{
+    background-color: #1D8899;
+}
+
+.nav-btn-off:active{
+    background-color: #1b555e;
+}
+
+.nav-btn-on{
+    width: 250px;
+    height: 60px;
+    background-color: #272930;
+    font-size: 18px;
+    textAlign: center;
+    color: gold;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.nav-btn-on:hover{
+    background-color: #1D8899;
+}
+
+.nav-btn-on:active{
+    background-color: #1d7280;
+}
+

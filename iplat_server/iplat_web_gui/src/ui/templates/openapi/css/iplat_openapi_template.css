@@ -1,0 +1,138 @@
+.open-api-template-area{
+    width: 100%;
+    /*background-color: #2E313A;*/
+    background-color: #272930;
+    margin-bottom: 3px;
+}
+.open-api-template{
+    height: 50px;
+    background-color: #272930;
+    line-height: 50px;
+    width: 100%;
+    display: inline-flex;
+}
+
+.open-api-template>div{
+
+    position: relative;
+}
+
+.open-api-template>div:first-child{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: pink;*/
+}
+
+.open-api-template>div:nth-child(2){
+    width: 20%;
+}
+
+.open-api-template>div:nth-child(3){
+    width: 55%;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 13px;
+    /*font-size: 16px;*/
+    letter-spacing: -0.04em;
+}
+
+
+.open-api-template>div:last-child{
+    width: 15%;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 13px;
+    /*font-size: 16px;*/
+    padding-left: 10px;
+    text-align: center;
+}
+
+
+.open-api-template-method{
+    text-align: center;
+    line-height: 26px;
+    width: 70px;
+    height: 30px;
+    border-radius: 25px;
+    border: 2px solid #1D8899;
+    color:white;
+
+}
+.open-api-template-title{
+    display: inline-block;
+    padding-left: 10px;
+    color: white;
+}
+.open-api-template-path{
+    margin-right: 16px;
+    color: white;
+}
+
+.open-api-template-description-area{
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    display: inline-flex;
+    background-color: #353740;
+}
+
+.open-api-template-description{
+    margin: 15px 30px;
+    color: white;
+}
+.open-api-template-description>span{
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+.open-api-template-request-parameters{
+    margin: 15px 30px;
+    color: white;
+}
+.open-api-template-request-parameters>span{
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+.open-api-template-table{
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ffffff55;
+    border-collapse: collapse;
+}
+
+.open-api-template-table-tr{
+    height: 40px;
+    background-color: #2E313A;
+}
+.open-api-template-table-tr>th{
+    width: 15%;
+    border:1px solid #ffffff55;
+}
+.open-api-template-table-tbody-tr{
+    height: 40px;
+}
+.open-api-template-table-tbody-tr>td{
+    border:1px solid #ffffff55;
+}
+
+.open-api-template-response{
+    margin: 15px 30px;
+    background-color: #2E313A;
+    color: white;
+}
+.open-api-template-response>span{
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+.open-api-template-response>div{
+    height: 200px;
+    overflow: auto;
+    background-color: #2E313A;
+}

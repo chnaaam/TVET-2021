@@ -1,0 +1,109 @@
+<div style={{
+          margin: "0 auto",
+          width:"100vw",
+          height:"100vh",
+          backgroundColor:"black"
+      }}>
+            <IPlatButton
+                Title={"Login"}
+                Float={"left"}
+                W={"40px"}
+                H={"20px"}
+                BgColor={Iplat_colors.FRAME_BACKGROUND}
+                FontSize={"5pt"}
+                Display={"inline-block"}
+                BgHoverColor={"pink"}
+            />
+
+            <IPlatIconButton
+                Img={LOGO}
+                Float={"center"}
+                W={"140px"}
+                H={"140px"}
+                Display={"block"}
+            />
+
+            {/*기본적인 Text Button (필요한 태그 사용하시면 됩니다. 필요 없으신건 안넣으셔 됩니다.)*/}
+            <IPlatTextButton
+                Title={"IPAtTextButton입니다"}
+                FontSize={"5pt"}
+                Display={"inline-block"}
+                W={"100px"}
+                H={"20px"}
+                BgColor={"blue"}
+                PaddingTop={"5px"}
+            />
+
+            <IPlatTextButton
+                Title={"IPAtTextButton입니다"}
+                FontSize={"5pt"}
+                Display={"inline-block"}
+                BgColor={"green"}
+            />
+
+            <IPlatCheckBox
+                Title={"Remember me"}
+            />
+
+            <div style={{
+                width:"300px",
+                height:"100px",
+                backgroundColor:"black"
+            }}>
+                <IPlatSelectBox
+                    Title={DeviceTypeItemList}
+                    W={"250px"}
+                    H={"40px"}
+                    PaddingLeft={"16px"}
+                    PaddingRight={"16px"}
+                    FontSize={"12pt"}
+                />
+                <IPlatSelectBox
+                    Title={SenserTypeItemList}
+                    W={"250px"}
+                    H={"40px"}
+                    PaddingLeft={"16px"}
+                    PaddingRight={"16px"}
+                    FontSize={"15pt"}
+                />
+            </div>
+
+            <IPlatTitle
+                Title={"Sensor Register"}
+            />
+
+            <IPlatContent
+                Title={"Sensor Name"}
+            />
+            <IPlatLimitSentence
+                Title={"Only lower letters and numbers are available"}
+            />
+
+            <IPlatBoldCorpus
+                Title={"Device Mangagement"}
+            />
+            <IPlatImage
+                Img={MAIN_CONTENT_OPENAPI}
+                W={"200px"}
+                H={"130px"}
+                Display={"block"}
+            />
+
+            <IPlatNomalCorpus
+                Title="Using Open API"
+                FontSize="11pt"
+            />
+
+            <IPlatNomalCorpus
+                Title="The quick brown fox jumps over a lazy dog. <br/>
+                                    Grumpy wizards make toxic brew for<br/>
+                                    the evil Queen and Jack. My faxed joke<br/>
+                                    won a pager in the cable TV quiz show"
+                FontSize="10pt"
+            />
+
+
+            <IPatTable />
+
+
+      </div>
