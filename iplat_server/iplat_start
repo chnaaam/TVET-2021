@@ -1,0 +1,18 @@
+# kill all processes related to the previous data collector & service server
+
+killall -9 python3
+
+# Start data collector
+
+cd ~/TVET-2021/iplat_server/iplat_data_collector_server
+nohup python3 iplat_dcollector.py &
+
+# Start service server
+
+cd ~/TVET-2021/iplat_server/iplat_service_server
+nohup python3 iplat_sserver.py &
+
+clear
+echo "============================"
+echo "      Welcome to iPLAT      "
+echo "============================"
