@@ -15,7 +15,7 @@ from src.route.free_board import construct_free_board_blueprint
 from src.route.notice_board import construct_notice_board_blueprint
 from src.route.archive import construct_archive_blueprint
 
-from utils.file_io import create_dir
+from src.utils.file_io import create_dir
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-config", default="config.ini")
